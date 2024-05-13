@@ -14,6 +14,8 @@ const getEvents = async (req, res) => {
   res.status(200).json(events);
 };
 
+const addParticipants = async (req, res) => {};
+
 export default {
   getEvents: ctrlWrapper(getEvents),
 };
