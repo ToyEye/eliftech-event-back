@@ -1,2 +1,1 @@
-export { Event } from "./eventsModel.js";
-export { User } from "./userModel.js";
+export { Event, userRegister } from "./eventsModel.js";

@@ -20,28 +20,31 @@ const eventSchema = new Schema(
       type: String,
       required: true,
     },
-    participants: [
-      {
-        fullName: {
-          type: String,
-          required: true,
+    participants: {
+      type: [
+        {
+          fullName: {
+            type: String,
+            required: true,
+          },
+          email: {
+            type: String,
+            required: true,
+            unique: true,
+          },
+          dateOfEvent: {
+            type: Date,
+            required: true,
+          },
+          source: {
+            type: String,
+            enum: ["Social media", "Friends", "Found myself"],
+            required: true,
+          },
         },
-        email: {
-          type: String,
-          required: true,
-          unique: true,
-        },
-        dateOfBirth: {
-          type: Date,
-          required: true,
-        },
-        source: {
-          type: String,
-          enum: ["Social media", "Friends", "Found myself"],
-          required: true,
-        },
-      },
-    ],
+      ],
+      default: [],
+    },
   },
   { versionKey: false, timestamps: true }
 );
@@ -49,7 +52,7 @@ const eventSchema = new Schema(
 export const userRegister = Joi.object({
   fullName: Joi.string().required(),
   email: Joi.string().email().required(),
-  dateOfBirth: Joi.date().iso().required(),
+  dateOfEvent: Joi.date().iso().required(),
   source: Joi.string()
     .valid("Social media", "Friends", "Found myself")
     .required(),
