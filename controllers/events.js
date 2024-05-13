@@ -6,7 +6,7 @@ const getEvents = async (req, res) => {
 
   const skip = (page - 1) * limit;
 
-  const events = await Event.find({}, "-updatedAt -createdAt", {
+  const events = await Event.find({}, "-updatedAt -createdAt -participants", {
     skip,
     limit,
   });
