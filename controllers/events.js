@@ -30,7 +30,7 @@ const addParticipants = async (req, res) => {
 const getEventParticipants = async (req, res) => {
   const { id } = req.params;
 
-  const participants = await Event.findById(id, "-updatedAt -createdAt");
+  const participants = await Event.findById(id, "title participants");
 
   res.status(200).json(participants);
 };

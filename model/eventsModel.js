@@ -32,7 +32,7 @@ const eventSchema = new Schema(
             required: true,
             unique: true,
           },
-          dateOfEvent: {
+          dateOfBirth: {
             type: Date,
             required: true,
           },
@@ -52,9 +52,9 @@ const eventSchema = new Schema(
 export const userRegister = Joi.object({
   fullName: Joi.string().required(),
   email: Joi.string().email().required(),
-  dateOfEvent: Joi.date().iso().required(),
+  dateOfBirth: Joi.date().iso().required(),
   source: Joi.string()
-    .valid("Social media", "Friends", "Found myself")
+    .valid("social media", "friends", "found myself")
     .required(),
 });
 
