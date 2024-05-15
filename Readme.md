@@ -12,3 +12,5 @@ For enviroment you need keys
 1. Get all events
 2. Add participants for event
 3. Get all participants from event
+
+### In the root there is an events.json file for the database
