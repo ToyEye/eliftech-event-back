@@ -14,3 +14,5 @@ For enviroment you need keys
 3. Get all participants from event
 
 ### In the root there is an events.json file for the database
+
+Enjoy
