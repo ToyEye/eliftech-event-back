@@ -7,7 +7,7 @@ mongoose
   .connect(MONGO_DB)
   .then(() => {
     console.log("Mongo on");
-    app.listen(3005, () => {
+    app.listen(3001, () => {
       console.log("server on");
     });
   })
