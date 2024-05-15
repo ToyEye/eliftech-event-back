@@ -8,7 +8,7 @@ const getEvents = async (req, res) => {
 
   const totalEvents = await Event.countDocuments({});
 
-  const events = await Event.find({}, "-updatedAt -createdAt -participants", {
+  const events = await Event.find({}, "-updatedAt -createdAt", {
     skip,
     limit,
   });
