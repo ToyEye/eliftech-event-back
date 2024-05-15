@@ -1,4 +1,5 @@
 import express from "express";
+
 import ctrs from "../controllers/events.js";
 import { isValidId, validateBody, isEmptyBody } from "../middlewares/index.js";
 import { userRegister } from "../model/index.js";

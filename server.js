@@ -1,9 +1,8 @@
 import mongoose from "mongoose";
 
-import app from "./app.js";
+import { app } from "./app.js";
 
-const MONGODB = process.env.MONGODB;
-const PORT = process.env.PORT || 4000;
+const { MONGODB, PORT = 3000 } = process.env;
 
 mongoose
   .connect(MONGODB)
@@ -16,4 +15,5 @@ mongoose
   .catch(() => {
     process.exit(1);
   });
+
 console.log("MY PORT", PORT);
