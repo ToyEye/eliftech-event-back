@@ -2,11 +2,11 @@ import mongoose from "mongoose";
 
 import app from "./app.js";
 
-const MONGO_DB = process.env.MONGO_DB;
+const MONGODB = process.env.MONGODB;
 const PORT = process.env.PORT || 4000;
 
 mongoose
-  .connect(MONGO_DB)
+  .connect(MONGODB)
   .then(() => {
     console.log("Mongo on");
     app.listen(PORT, () => {
@@ -16,3 +16,4 @@ mongoose
   .catch(() => {
     process.exit(1);
   });
+console.log("MY PORT", PORT);
