@@ -10,7 +10,7 @@
     "build": ""
   },
   "keywords": [],
-  "author": "",
+  "author": "Oleksii Korotenko",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
